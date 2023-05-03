@@ -1,0 +1,91 @@
+@import "First Section.css";   
+@import "Second Section.css";
+
+:root{
+--background-color:#C5E4E7;
+--container_background-color: white;
+--results_container_background-color: #00474B;
+--num-color: white;
+--inputdata-text-color: #5E7A7D;
+--inputdata-num-color:  #214242;
+--inputdata-background-color:#F3F9FA;
+--inputdata-placeholder-color: #a2b9b9;
+--button-background-color-hover:#9FE8DF;
+--button-reset-color:#26C2AE;
+--description_h4:white;
+--description_span:#7F9D9F;
+--font-family-1:"Space Mono";
+--font-family-2: arial;
+}
+
+html{
+background-color: var(--background-color);
+font-family: var(--font-family-1), var(--font-family-2);
+font-size: 62.5%;
+box-sizing: border-box;
+margin: 0;
+}
+
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+@media (min-width: 76.8rem){
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-evenly;
+        height: 98vh;
+    }
+}
+
+
+.logo{
+width: 11rem;
+margin-top: 3rem;
+align-self: center;
+}
+
+@media (min-width: 76.8rem){
+    .logo{
+        margin-top: -2rem;
+    }
+}
+
+.container{   /*content container, that includes two sections (see First and Second sections) */
+background-color: var(--container_background-color); 
+max-width: 106.6rem;
+height: 82.4rem;
+border-top-right-radius: 3rem;
+border-top-left-radius: 3rem;
+display: grid;
+justify-content: center;
+grid-template-areas: 
+"1fr"
+"1fr"
+"1fr";
+align-items: center;
+margin-top: 4rem;
+margin-left: -0.6rem;
+margin-right: -0.6rem;
+position: relative;
+}
+
+@media (min-width: 76.8rem){
+    .container{ 
+        background-color: var(--container_background-color); 
+        width: 106.6rem;
+        height: 48.4rem;
+        border-radius: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: -1rem;
+    }
+}
+
+
+

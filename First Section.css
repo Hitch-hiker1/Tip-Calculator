@@ -1,0 +1,223 @@
+/*first Section, where user choose amount of bill, number of people and % of tip*/
+
+/*main container of first section, where is generated input data by users */
+.inputdata-container{ 
+    max-width: 45rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    }
+
+    .input-bill_container{
+        margin-top: 1rem;
+    }
+
+    @media (min-width:76.8rem){
+        .inputdata-container{ 
+            margin-top: -2rem;
+            justify-content: space-between;
+        } 
+    }
+    
+    /* styles for Input windows >> */
+    input {
+    background-color: var(--inputdata-background-color);
+    border: none;
+    border-radius: 0.3rem;
+    width: 100%;
+    height: 4.5rem;
+    font-size: 2.4rem;
+    text-align: right;
+    font-weight: 700;
+    color: var(--inputdata-placeholder-color);
+    font-family: var(--font-family-1);
+    text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        direction: ltr;
+    }
+    
+    input::placeholder {
+    color: var(--inputdata-placeholder-color);
+    }
+    
+    input::-webkit-input-placeholder {     /*fallback color for old browsers*/
+    color: var(--inputdata-placeholder-color);
+    } 
+    input:-ms-input-placeholder {  
+    color: var(--inputdata-placeholder-color);
+    }
+    
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {    /* Remove the increment and decrement arrows from the number input */
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    
+    input[type=number]::-moz-number-spinners {        /* ...for moz */
+    display: none;
+    }
+    
+    input:hover{
+    border-width: 3rem ;
+    outline: 0.2rem solid rgba(47, 188, 138, 0.8);
+    cursor:pointer;
+    }
+    
+    input:focus{
+    outline: 0.2rem solid rgba(47, 188, 138, 0.8);
+    color: var(--inputdata-num-color);   
+    }
+    
+    input.tip_percentage{
+    box-sizing: border-box;
+    background-color: var(--inputdata-background-color);
+    outline: none;
+    color: var(--inputdata-placeholder-color );
+    font-size: 2.4rem;
+    }
+    
+    input.tip_percentage::placeholder{
+    text-align: center;
+    }
+    input.tip_percentage:focus{
+    color: var(--inputdata-num-color);
+    }
+    input.tip_percentage:hover{
+    outline: 0.2rem solid rgba(47, 188, 138, 0.8);
+    background-color: var(--inputdata-background-color);
+    transition: 0s;
+    }
+    /* << styles for Input windows */
+
+
+    /* Icons */
+    div > img{
+    position: absolute;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    }
+    
+    label {
+    color: var(--inputdata-text-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+    display: block;
+    }
+    
+    .p1{             /*bill*/
+    margin-bottom: 1rem;   
+    }
+
+    .p2 {           /*Select Tip*/
+        margin-top: 2rem;
+    }
+
+    @media (min-width: 76.8rem){  
+        .p2{                         
+            margin-top: 4rem;
+        }
+        .p1{            
+            margin-bottom: 1rem;   
+            }
+            
+    }
+    .num_persons_mini_container{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -1rem
+    }
+
+    .select-tip_container{
+    display: grid;
+    grid-template-areas: 
+    "1fr 1fr"
+    "1fr 1fr"
+    "1fr 1fr";
+    justify-content: space-between;
+    row-gap: 1.2rem;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    }
+    
+    @media (min-width: 76.8rem) {
+        .select-tip_container{
+            display: grid;
+            grid-template-areas: 
+            "1fr 1fr 1fr"
+            "1fr 1fr 1fr";
+            gap:1.5rem;
+            
+            }
+    }
+    
+    .tip_percentage {
+    width: 21.5rem;
+    height: 5.5rem;
+    background-color: var(--results_container_background-color);
+    color: var(--num-color);
+    font-family: var(--font-family-2);
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-radius: 0.8rem;
+    border: none;
+    cursor: pointer;
+    }
+    
+    @media (min-width: 76.8rem) {
+         
+    .tip_percentage{
+        width: 13.5rem;
+        height: 5.5rem;
+        background-color: var(--results_container_background-color);
+        color: var(--num-color);
+        font-family: var(--font-family-2);
+        font-size: 2.4rem;
+        border-radius: 0.8rem;
+        
+        }
+
+    .input_tip_percentage{
+        width: 13.3rem;
+        height: 5.5rem;
+        border-radius: 0.8rem;
+    }
+    }
+
+
+    .tip_percentage:hover{
+    color: var(--results_container_background-color);
+    background-color: var(--button-background-color-hover);
+    transition: 0.4s;
+    }
+
+
+    /* for JS */
+
+    button.tip_percentage.active{
+        color: var(--results_container_background-color);
+        background-color: var(--button-background-color-hover);
+    }
+
+    .input_tip_percentage.active{
+        outline: 0.2rem solid rgba(47, 188, 138, 0.8);
+        color: var(--inputdata-num-color);   
+    }
+
+    input.active{
+        outline: 0.2rem solid rgba(47, 188, 138, 0.8);
+        color: var(--inputdata-num-color);   
+    }
+
+    .warningtext{
+        color: rgba(255, 2, 2, 0.8);
+        display: none;
+    }
+    .warningtext.activation{
+        display:initial;
+    }
+    
+    .input_num_of_people.activation{
+        outline: 0.2rem solid rgba(255, 2, 2, 0.8);
+    }

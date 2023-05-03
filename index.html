@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="stylesheet" href="Main_style.css"> 
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <title>Frontend Mentor | Tip calculator app</title>
+    </head>
+<!--this is Tip calculator app, where user can see quantity of tip and total payement for per person according to selected/inputed data-->
+
+<!--content is divided by two section, the first one is for getting data and second is for seeing results-->
+    <body>
+      <img class="logo" src="images/logo.svg" alt="Logo for the Tip Calculator app">      
+      <div class="container">
+        <section class="inputdata-container">   <!-- The first Section -->
+          <div class="input-bill_container">
+            <label for="for_input_bill" class="p1">Bill</label>
+            <img src="images/icon-dollar.svg" alt="icon of dollar, which is attached to window, where user can input number of people">
+            <input id="for_input_bill" class="input_bill" type="number" placeholder="0" title="Input bill" > 
+            <label for="tip_percentage" class="p2">Select Tip % </label>
+          </div>
+          <div class="select-tip_container">
+              <button class="tip_percentage">
+                5%
+              </button>
+              <button class="tip_percentage">
+                10%
+              </button>
+              <button class="tip_percentage">
+                15%
+              </button>
+              <button class="tip_percentage">
+                25%
+              </button>
+              <button class="tip_percentage">
+                50% 
+              </button>
+              <input class="tip_percentage input_tip_percentage" type="number" placeholder="Custom" title="Input percentage of Tip">
+            </div>
+            <div class="input-num-of-persons_container">  
+              <div class="num_persons_mini_container">         
+                <label for="for_input_num_of_people" class="p1"> Number of People</label>
+                <p class="warningtext"> Can't be zero </p>
+              </div>
+              <img src="images/icon-person.svg" alt="icon of person, which is attached to window, where user can input number of people">
+              <input id="for_input_num_of_people" class="input_num_of_people" type="number" placeholder="0" title="Input number of people"> 
+            </div>
+        </section>
+        <section class="results_container">   <!-- Second Section -->
+          <h4 class="description_tip">Tip Amount <br> <span>/ person </span> </h4>
+          <div class="tip_amount amount">$0.00</div>
+          <h4 class="description_total">Total <br> <span>/ person </span> </h4>
+          <div class="total_amount amount">$0.00</div>
+          <button class="reset_button" title="Reset everything">RESET</button>
+        </section>
+      </div>
+      <script src="script.js" ></script>
+    </body>
+  </html>

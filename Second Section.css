@@ -1,0 +1,119 @@
+/*Second Section, where is showed results of generated input data by user that choose it in the first section */
+
+
+/*main container of second section*/
+.results_container{
+    background-color:var(--results_container_background-color) ;
+    width: 49rem;
+    height: 80%;
+    border-radius: 2rem;
+    margin-top: 3rem;   
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "description_tip tip_amount"
+        "description_total total_amount"
+        "reset_button reset_button";    
+    align-items: center;
+    position: relative;
+    }
+
+    @media(min-width:76.8rem){
+        .results_container{
+            height: 90%;
+            margin-top: 0.5rem;
+        }
+    }
+    
+    /*descriptions of types of results >> */
+
+    /*tip amount per person*/
+    h4 {  
+        font-family: var(--font-family-1);
+        color: var(--description_h4);
+        font-size: 2rem;
+        font-weight: 700;
+        margin-left: 3rem;
+    }
+    /*Total amount per person */
+    span {
+        color: var(--description_span);
+        font-family: var(--font-family-1);
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    .description_tip{
+        grid-area: description_tip; 
+    }
+    .description_total{
+        grid-area: description_total;
+    }
+
+     /* << descriptions of result types */
+    
+    .amount{
+        color: var(--button-reset-color);
+        font-family: var(--font-family-1);
+        font-weight: 700;
+        font-size: 3.8rem;
+        justify-self: flex-end;
+        
+    }
+
+    @media(min-width:76.8rem){
+        .amount{
+            
+            font-size: 5.8rem;
+        }
+    }
+
+
+    .tip_amount{
+        grid-area: tip_amount;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        direction: ltr;
+        max-width: 100%;
+        padding-right: 3.5rem;
+    }
+    .total_amount{
+        grid-area: total_amount;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        direction: ltr;
+        max-width: 100%;
+        padding-right: 3.5rem;
+    }
+
+    .reset_button{
+        grid-area: reset_button;
+        width: 43rem;
+        height: 4.8rem;
+        border-radius: 0.6rem;
+        border: none;
+        font-family: var(--font-family-2);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--results_container_background-color);
+        background-color: var(--button-reset-color);
+        cursor: pointer;
+        justify-self: center;
+        margin-top: -1rem;
+    }
+
+    @media(min-width:76.8rem){
+        .reset_button{
+            height: 5.6rem;
+        }
+    }
+    
+    .reset_button:hover{
+        background-color: var(--button-background-color-hover);
+        transition: 0.4s;
+    }
+    
+    
